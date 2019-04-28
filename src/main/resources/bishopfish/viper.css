@@ -1,0 +1,22 @@
+/*.root{
+    -fx-background-color: 012d5a;
+    -fx-font-family: ;
+    -fx-
+}
+.label{
+Use this to style all of the labels
+}
+.button{
+Use this to style all of the buttons etc....
+}
+
+.custom css function{
+just do button.getstyleClass().add("custom Function name")
+}
+#makinganID{
+some style thing
+apply to objects in the screen with (theScreenObject.setID("theIDName")
+}
+
+
+use scene.getstylesheet() to apply the custom style*/

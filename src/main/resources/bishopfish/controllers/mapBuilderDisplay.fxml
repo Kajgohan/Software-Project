@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import net.kurobako.gesturefx.GesturePane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../curie.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bishopfish.controllers.MapBuilderDisplayController">
+    <children>
+      <GridPane layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="234.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="772.0" minHeight="10.0" prefHeight="411.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="278.66668701171875" minHeight="10.0" prefHeight="236.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+         </rowConstraints>
+         <children>
+                <HBox alignment="CENTER_RIGHT" GridPane.columnSpan="9" GridPane.rowIndex="1" GridPane.rowSpan="5">
+                    <children>
+                        <AnchorPane HBox.hgrow="ALWAYS">
+                            <children>
+                                <GesturePane fx:id="gpane" HBarEnabled="false" VBarEnabled="false" fitWidth="true" maxScale="15.0" minScale="0.5" scrollMode="ZOOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="imgAnchor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+                                        <ImageView fx:id="imgView" />
+                                    </AnchorPane>
+                                </GesturePane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+            <VBox fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="528.0" prefWidth="193.0" GridPane.columnIndex="8" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+               <children>
+                  <Button fx:id="floor32" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="3" textAlignment="RIGHT" textFill="#032c59" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="floor22" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="2" textAlignment="RIGHT" textFill="#032c59" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="floor12" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="1" textAlignment="RIGHT" textFill="#032c59" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="floorG2" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="G" textAlignment="RIGHT" textFill="#032c59" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="floorL12" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="L1" textAlignment="RIGHT" textFill="#032c59" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="floorL22" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="L2" textAlignment="RIGHT" textFill="#032c59" wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets left="120.0" top="10.0" />
+               </GridPane.margin>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#homeButton" prefHeight="85.0" prefWidth="75.0" styleClass="home-button" text=" " GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets bottom="50.0" left="10.0" />
+               </GridPane.margin>
+            </Button>
+            <JFXButton fx:id="showEdges" onAction="#showAllEdges" prefHeight="96.0" prefWidth="98.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Show Edges" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowSpan="5" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </JFXButton>
+            <JFXButton fx:id="showNodes" onAction="#showAllNodes" prefHeight="96.0" prefWidth="98.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="Show Nodes" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowSpan="4" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </JFXButton>
+            <JFXButton onAction="#backButton" prefHeight="57.0" prefWidth="75.0" styleClass="back-button" text=" " GridPane.hgrow="ALWAYS" GridPane.rowSpan="5" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets bottom="15.0" left="10.0" />
+               </GridPane.margin>
+            </JFXButton>
+            <JFXButton fx:id="addDeleteToggle" onAction="#addDelete" prefHeight="96.0" prefWidth="90.0" style="-fx-background-color: white; -fx-background-radius: 0;" text="View" wrapText="true" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></JFXButton>
+            <AnchorPane GridPane.columnIndex="8" GridPane.rowIndex="3" GridPane.rowSpan="2">
+               <children>
+                  <JFXTextField alignment="CENTER" layoutX="36.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="145.0" promptText="X Coordinate" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" fx:id="xCoord" />
+                  <JFXTextField fx:id="yCoord" alignment="CENTER" layoutX="36.0" layoutY="47.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="145.0" promptText="Y Coordinate" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXTextField fx:id="floorField" alignment="CENTER" layoutX="36.0" layoutY="94.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="145.0" promptText="Floor" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXTextField fx:id="buildingField" alignment="CENTER" layoutX="36.0" layoutY="142.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="145.0" promptText="Building" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXTextField fx:id="nodeType" alignment="CENTER" layoutX="36.0" layoutY="192.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="145.0" promptText="Node Type" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXTextField fx:id="longName" alignment="CENTER" layoutX="36.0" layoutY="242.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="145.0" promptText="Long Name" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXTextField fx:id="shortName" alignment="CENTER" layoutX="36.0" layoutY="291.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="145.0" promptText="Short Name" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXButton fx:id="submitButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#submitBtn" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #fefefe;" styleClass="font" text="Submit" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </GridPane>
+    </children>
+    <styleClass>
+        <String fx:value="large-cells" />
+        <String fx:value="font" />
+    </styleClass>
+</AnchorPane>

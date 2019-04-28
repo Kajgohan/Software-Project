@@ -1,0 +1,97 @@
+.home-button{
+    -fx-background-image: url("Brigham_and_Womens_Hospital_logo.svg.png");
+    -fx-background-size: 75px, 75px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: #fefefe;
+}
+
+.generic-button{
+    -fx-background-color: #fefefe;
+}
+.welcome-screen{
+    -fx-background-image: url("BWHShapiro2.jpg");
+    -fx-opacity: 33;
+    -fx-background-size: stretch;
+}
+
+.standard-colors{
+    -fx-background-color: #032c59;
+    -fx-text-fill: #000000;
+}
+
+.back-button{
+    -fx-background-image: url("undo-back-return-button-png-3.png");
+    -fx-background-size: 75px, 75px;
+    -fx-background-repeat: no-repeat;
+}
+
+.medium-cells{
+    -fx-background-image: url("BWH-Background-Medcells.png");
+}
+
+.large-cells{
+    -fx-background-image: url("BWH-Background-Largecells.png");
+}
+
+/* Styling the slider track */
+.jfx-slider > .track {
+    -fx-background-color: #f1f1f1;
+}
+
+/* Styling the slider thumb */
+.jfx-slider > .thumb {
+    -fx-background-color: #032c59;
+}
+
+/* Styling the filled track */
+.jfx-slider > .colored-track {
+    -fx-background-color: #032c59;
+}
+
+/* Styling the animated thumb */
+.jfx-slider > .animated-thumb {
+    -fx-background-color: #032c59;
+}
+
+.font {
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+.font-white{
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fefefe;
+}
+
+.jfx-combo-box{
+    -fx-background-color: WHITE;
+}
+
+.jfx-combo-box{
+    -fx-background-color: WHITE;
+}
+
+.jfx-combo-box.label{
+
+    -fx-text-fill: WHITE;
+}
+
+#add.jfx-button {
+    -fx-background-color: WHITE;
+    -fx-text-fill: BLACK;
+
+}
+
+#remove.jfx-button {
+    -fx-background-color: WHITE;
+    -fx-text-fill: BLACK;
+
+}
+
+#employees.AnchorPane {
+    -fx-background-color: WHITE;
+    -fx-text-fill: BLACK;
+}

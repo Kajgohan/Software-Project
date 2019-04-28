@@ -1,0 +1,29 @@
+fid,featureName,permissionType,featureType
+ADMR,All Requests,R,o
+SCHR,Scheduling Request,R,o
+GFTR,Gift Request (James Kajon),R,SR
+INTR,Interpreter Request (Katharine Conroy),R,SR
+CNSR,Consult Request (Remy Allegro),R,SR
+RLGR,Religious Request (Carl Runci),R,SR
+FLOR,Florist Request (Skylar OConnell),R,SR
+PETR,Pet Therapy Request (Orlando Pinel),R,SR
+REDR,Reading Request (Katie Martin),R,SR
+ACMR,Accommodation Request (Jack Hogan),R,SR
+TRNR,External Transport Request (Ann Jicha),R,SR
+SECR,Security Requests,R,SR
+ITRR,IT Request,R,SR
+ITNR,Internal Transit Request (Team N),R,SR
+ADMF,All Requests,F,o
+SCHF,Scheduling Request,F,o
+GFTF,Gift Request (James Kajon),F,SR
+INTF,Interpreter Request (Katharine Conroy),F,SR
+CNSF,Consult Request (Remy Allegro),F,SR
+RLGF,Religious Request (Carl Runci),F,SR
+FLOF,Florist Request (Skylar OConnell),F,SR
+PETF,Pet Therapy Request(Orlando Pinel),F,SR
+REDF,Reading Request (Katie Martin),F,SR
+ACMF,Accommodation Request (Jack Hogan),F,SR
+TRNF,External Transport Request (Ann Jicha),F,SR
+SECF,Security Request,F,SR
+ITRF,IT Request,F,SR
+ITNF,Internal Transit Request (Team N),F,SR

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="polygonAnchor" prefHeight="400.0" prefWidth="600.0" styleClass="large-cells" stylesheets="@../curie.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bishopfish.controllers.RoomViewController">
+   <children>
+      <GridPane prefHeight="480.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="126.0" minHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="101.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="polygonView" fitHeight="727.0" fitWidth="953.0" pickOnBounds="true" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <image>
+                  <Image url="/bishopfish/roomstobook.jpg" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <Group fx:id="polygonGroup" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Group>
+            <Button mnemonicParsing="false" opacity="0.5" prefHeight="27.0" prefWidth="36.0" style="-fx-background-color: #fe010c;" text="            " textFill="#fe010c" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin></Button>
+            <Label text="Room is currently booked" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#homeButton" prefHeight="85.0" prefWidth="74.0" styleClass="home-button" text=" " GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="10.0" top="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Room is currently available" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets bottom="40.0" left="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" opacity="0.5" prefHeight="27.0" prefWidth="36.0" style="-fx-background-color: #09f911;" text="            " textFill="#09f911" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets bottom="40.0" right="50.0" />
+               </GridPane.margin>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#onBookingClick" prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="Make a Booking" textFill="#032c59" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+               <graphic>
+                  <FontAwesomeIconView fill="#032c59" glyphName="BOOK" size="48.0" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets bottom="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#onFullClick" prefHeight="57.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="View Schedule" textFill="#032c59" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+               <graphic>
+                  <FontAwesomeIconView fill="#032c59" glyphName="CALENDAR" size="48.0" />
+               </graphic>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button contentDisplay="TOP" disable="true" mnemonicParsing="false" onAction="#onDemoClick" prefHeight="57.0" prefWidth="159.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="Demo Options" textAlignment="RIGHT" textFill="#032c59" visible="false" wrapText="true" GridPane.rowIndex="3">
+               <graphic>
+                  <FontAwesomeIconView fill="#032c59" glyphName="QUESTION_CIRCLE" size="48.0" />
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

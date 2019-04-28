@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import net.kurobako.gesturefx.GesturePane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="954.0" prefWidth="1685.0" stylesheets="@../curie.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bishopfish.controllers.GuestHomePageController">
+    <children>
+        <HBox fx:id="midCanvas" alignment="CENTER_RIGHT" prefHeight="954.0" prefWidth="1677.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="listenerAnchor" HBox.hgrow="ALWAYS">
+                    <children>
+                        <GesturePane fx:id="gpane" HBarEnabled="false" VBarEnabled="false" fitWidth="true" maxScale="15.0" minScale="0.5" scrollMode="ZOOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <AnchorPane fx:id="imgAnchor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+                                <ImageView fx:id="imgView" />
+                            </AnchorPane>
+                        </GesturePane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="964.0" prefWidth="75.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="floor3" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="3" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="floor2" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="2" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="floor1" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="1" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="floorG" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="G" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="floorL1" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="L1" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="floorL2" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClick" prefHeight="48.0" prefWidth="61.0" style="-fx-background-color: white; -fx-background-radius: 0;" stylesheets="@../curie.css" text="L2" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets top="100.0" />
+            </padding>
+        </VBox>
+        <AnchorPane fx:id="directionsFxml" prefHeight="899.0" prefWidth="317.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="55.0" />
+        <AnchorPane fx:id="subControllerPane" mouseTransparent="true" prefHeight="954.0" prefWidth="1685.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <HBox prefHeight="55.0" prefWidth="1685.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onEmergencyClick" prefHeight="54.0" prefWidth="185.0" style="-fx-background-color: white;" stylesheets="@../curie.css" text="Emergency" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="#032c59" glyphName="AMBULANCE" size="40.0" stroke="WHITE" />
+                    </graphic>
+                    <HBox.margin>
+                        <Insets left="5.0" right="60.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onReserveARoomClick" prefHeight="54.0" prefWidth="185.0" style="-fx-background-color: white;" stylesheets="@../curie.css" text="Scheduler" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="#032c59" glyphName="CALENDAR" size="40.0" text="" wrappingWidth="44.57143020629883" />
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="60.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onDirectoriesClick" prefHeight="54.0" prefWidth="185.0" style="-fx-background-color: white;" stylesheets="@../curie.css" text="Directions" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="#032c59" glyphName="MAP" size="40.0" />
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="60.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onSettingsClick" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: white;" stylesheets="@../curie.css" text="Settings" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="#032c59" glyphName="GEAR" size="40.0" text="" />
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="60.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onAboutClick" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: white;" stylesheets="@../curie.css" text="About" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="#032c59" glyphName="" size="40.0" text="" />
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="60.0" />
+                    </HBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#signOutButton" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: white;" stylesheets="@../curie.css" text="Sign Out" textAlignment="RIGHT" textFill="#032c59" wrapText="true">
+                    <graphic>
+                        <FontAwesomeIconView boundsType="VISUAL" fill="#032c59" glyphName="" size="40.0" text="" />
+                    </graphic>
+                    <HBox.margin>
+                        <Insets right="60.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <ScrollPane fx:id="scrollPane" layoutY="140.0" prefHeight="638.0" prefWidth="377.0" style="-fx-background-color: white;" vbarPolicy="NEVER" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="55.0">
+            <content>
+                <AnchorPane focusTraversable="true" prefHeight="900.0" prefWidth="377.0">
+                    <children>
+                        <JFXTextArea fx:id="textDirectionsBox" editable="false" layoutX="-3.0" layoutY="-2.0" prefHeight="638.0" prefWidth="379.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+      <ToggleButton fx:id="toggleDirections" layoutX="10.0" layoutY="460.0" mnemonicParsing="false" onAction="#toggleTextDirections" prefHeight="100.0" prefWidth="131.0" style="-fx-background-color: white;" text="Show Directions" textFill="#032c59" visible="false" wrapText="true" AnchorPane.rightAnchor="15.0" />
+    </children>
+    <styleClass>
+        <String fx:value="large-cells" />
+        <String fx:value="font" />
+    </styleClass>
+</AnchorPane>

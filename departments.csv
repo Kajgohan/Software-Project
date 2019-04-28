@@ -1,0 +1,16 @@
+departmentID,departmentName,Type
+CARD,Cardiology,Medical
+ONC,Oncology,Medical
+RAD,Radiology,Medical
+ANS,Anesthesiology,Medical
+PED,Pediatrics,Medical
+IMUN,Immunology,Medical
+PSYC,Psychiatry,Medical
+DERM,Dermatology,Medical
+TSUP,Tech Support,IT
+INSC,Information Security,IT
+ACCT,Accounting,Administrative
+LEG,Legal,Administrative
+ELEC,Electrician,Custodial
+PLUM,Plumbing,Custodial
+GRD,Guards,Security

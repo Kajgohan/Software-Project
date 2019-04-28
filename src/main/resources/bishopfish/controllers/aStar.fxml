@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="directionsFxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="899.0" prefWidth="317.0" styleClass="large-cells" stylesheets="@../curie.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bishopfish.controllers.AStarController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="899.0" prefWidth="317.0" styleClass="font" stylesheets="@../curie.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label text="Select Start Location" textFill="#fefefe">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="directoriesDropdownStart" prefHeight="39.0" prefWidth="304.0" promptText="Directories" style="-fx-background-color: white;" styleClass="font">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="optionsDropdownStart" prefHeight="39.0" prefWidth="304.0" promptText="Options" style="-fx-background-color: white;" styleClass="font">
+               <VBox.margin>
+                  <Insets bottom="40.0" left="10.0" right="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label text="Select End Location" textFill="#fefefe">
+               <font>
+                  <Font name="Century Gothic Bold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="directoriesDropdownFinish" prefHeight="39.0" prefWidth="304.0" promptText="Directories" style="-fx-background-color: white;" styleClass="font">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="optionsDropdownFinish" prefHeight="39.0" prefWidth="304.0" promptText="Options" style="-fx-background-color: white;" styleClass="font">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" right="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#onSubmitClick" style="-fx-background-color: #fefefe;" text="Submit">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="150.0" left="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#backButton" prefHeight="53.0" prefWidth="75.0" style="-fx-background-color: #fefefe;" styleClass="back-button">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

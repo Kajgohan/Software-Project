@@ -1,0 +1,147 @@
+group 'edu.wpi.cs3733.d19.TeamB' // replace with your package name
+version '0.1'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = "bishopfish.Main" // replace with your main class
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://ravana.dyn.wpi.edu/maven'
+    }
+    jcenter()
+}
+
+
+
+// You'll need to create an bishopfish.integration-test folder with the same structure as your test or main folders
+sourceSets {
+    integrationTest {
+        java {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            srcDir file('src/integration-test/java')
+        }
+        resources.srcDir file('src/integration-test/resources')
+    }
+}
+
+configurations {
+    integrationTestCompile.extendsFrom testCompile
+    integrationTestRuntime.extendsFrom testRuntime
+}
+
+// This will be the name of the task that you'll run to do only your bishopfish.integration tests
+task integrationTest(type: Test) {
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+    outputs.upToDateWhen { false }
+}
+
+dependencies {
+
+    integrationTestRuntime(
+            [group: 'org.jfxtras', name: 'jfxtras-menu', version: '8.0-r6'],
+            [group: 'org.jfxtras', name: 'jfxtras-controls', version: '8.0-r5'],
+            [group: 'net.kurobako', name: 'gesturefx', version: '0.3.0'],
+            [group: 'junit', name: 'junit', version: '4.12'],
+            [group: 'com.jfoenix', name: 'jfoenix', version: '8.0.8'],
+            [group: 'org.apache.derby', name: 'derby', version: '10.11.1.1'],
+            [group: 'org.apache.derby', name: 'derbyclient', version: '10.11.1.1'],
+            [group: 'org.apache.derby', name: 'derbytools', version: '10.11.1.1'],
+            [group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'],
+            [group: 'net.aksingh', name: 'owm-japis', version: '2.5.2.3'],
+            [group: 'net.sf.sociaal', name: 'freetts', version: '1.2.2'],
+            [group: 'de.jensd', name: 'fontawesomefx', version: '8.9'],
+            [group: 'org.jfxtras', name: 'jfxtras-all', version: '8.0-r6']
+
+
+
+            //[group: "org.junit.platform", name: "junit-platform-launcher", version: "1.0.0-M3"]
+
+
+    )
+
+    testCompile(
+            [group: 'org.jfxtras', name: 'jfxtras-menu', version: '8.0-r6'],
+            [group: 'org.jfxtras', name: 'jfxtras-controls', version: '8.0-r6'],
+            [group: 'net.kurobako', name: 'gesturefx', version: '0.3.0'],
+            [group: 'junit', name: 'junit', version: '4.12'],
+            [group: 'com.jfoenix', name: 'jfoenix', version: '8.0.8'],
+//            [group: 'org.openjfx', name: "javafx-base", version: '11'],
+
+            [group: 'org.apache.derby', name: 'derby', version: '10.11.1.1'],
+            [group: 'org.apache.derby', name: 'derbyclient', version: '10.11.1.1'],
+            [group: 'org.apache.derby', name: 'derbytools', version: '10.11.1.1'],
+            [group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'],
+            [group: 'net.aksingh', name: 'owm-japis', version: '2.5.2.3'],
+            [group: 'net.sf.sociaal', name: 'freetts', version: '1.2.2'],
+            [group: 'de.jensd', name: 'fontawesomefx', version: '8.9'],
+            [group: 'org.jfxtras', name: 'jfxtras-labs',version: '8.0-r5'],
+            [group: 'de.jensd', name: 'fontawesomefx', version: '8.9'],
+            [group: 'com.github.sarxos', name: 'webcam-capture', version: '0.3.10'],
+            [group: 'com.machinezoo.sourceafis', name: 'sourceafis', version: '3.4.1'],
+            [group: 'org.jfxtras', name: 'jfxtras-all', version: '8.0-r6'],
+            //[group: 'org.slf4j', name: 'slf4j-api', version: '1.7.5']
+            [group: 'com.rometools', name: 'rome', version: '1.12.0'],
+    )
+    compile(
+            [group: 'edu.wpi.cs3733.d19.teamB', name: 'TeamBEmergency', version:'1.0.3'],
+            [group: 'edu.wpi.cs3733.d19.teamN', name: 'TeamNInternalTransportRequest', version:'1.0.0'],
+
+            [group: 'org.jfxtras', name: 'jfxtras-menu', version: '8.0-r6'],
+            [group: 'org.jfxtras', name: 'jfxtras-controls', version: '8.0-r6'],
+            [group: 'net.kurobako', name: 'gesturefx', version: '0.3.0'],
+            [group: 'junit', name: 'junit', version: '4.12'],
+            [group: 'com.jfoenix', name: 'jfoenix', version: '8.0.8'],
+//            [group: 'org.openjfx', name: "javafx-base", version: '11'],
+
+            [group: 'org.apache.derby', name: 'derby', version: '10.11.1.1'],
+            [group: 'org.apache.derby', name: 'derbyclient', version: '10.11.1.1'],
+            [group: 'org.apache.derby', name: 'derbytools', version: '10.11.1.1'],
+            [group: 'javax.mail', name:'mail', version: '1.5.0-b01'],
+            [group: 'com.textmagic.sdk', name:'textmagic-java-sdk', version: '1.2.0'],
+            [group: 'net.aksingh', name: 'owm-japis', version: '2.5.2.3'],
+            [group: 'net.sf.sociaal', name: 'freetts', version: '1.2.2'],
+            [group: 'de.jensd', name: 'fontawesomefx', version: '8.9'],
+            [group: 'com.github.sarxos', name: 'webcam-capture', version: '0.3.10'],
+            [group: 'com.machinezoo.sourceafis', name: 'sourceafis', version: '3.4.1'],
+            [group: 'de.jensd', name: 'fontawesomefx', version: '8.9'],
+            [group: 'com.twilio.sdk', name: 'twilio', version: '7.37.2'],
+            [group: 'org.jfxtras', name: 'jfxtras-all', version: '8.0-r6'],
+            [group: 'org.json', name: 'json', version: '20090211'],
+            [group: 'org.jfxtras', name: 'jfxtras-all', version: '8.0-r6'],
+            [group: 'de.jensd', name: 'fontawesomefx', version: '8.9'],
+            [group: 'org.jfxtras', name: 'jfxtras-labs',version: '8.0-r5'],
+            [group: 'org.json', name: 'json', version: '20090211'],
+            //[group: 'org.slf4j', name: 'slf4j-api', version: '1.7.5'],035932
+            [group: 'com.rometools', name: 'rome', version: '1.12.0'],
+            [group: 'com.googlecode.soundlibs', name: 'vorbisspi', version: '1.0.3-1'],
+//            //[group: 'edu.wpi.cs3733.d19.teamF', name: 'SanitationServiceAPI', version:'1.0.0'],
+////            [group: 'edu.wpi.cs3733.d19.teamA', name: 'TeamAMedicalImagingRequest', version:'1.3.0'],
+//            [group: 'edu.wpi.cs3733.d19.teamN', name: 'TeamNInternalTransportRequest', version:'1.0.0'],
+
+    )
+}
+check.dependsOn integrationTest
+integrationTest.mustRunAfter test
+
+// This allows your tests to be run multiple times in a row without needing to change the files
+test {
+    outputs.upToDateWhen { false }
+}
+
+// This allows the jar to be created, it appears in the build/libs folder
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from configurations.runtime.collect { zipTree(it) }
+}

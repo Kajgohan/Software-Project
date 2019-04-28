@@ -1,0 +1,23 @@
+ROOMID,NAME,NODEID,OCCUPANCY,ISOCCUPIED
+W11,Workzone 11,k,1,false
+W12,Workzone 12,k,1,false
+W13,Workzone 13,k,1,false
+W14,Workzone 14,k,1,false
+W21,Workzone 21,l,1,false
+W22,Workzone 22,k,1,true
+W31,Workzone 31,m,1,false
+W32,Workzone 32,m,1,false
+W33,Workzone 33,m,1,false
+W34,Workzone 34,m,1,false
+W35,Workzone 35,m,1,false
+W36,Workzone 36,m,1,false
+W37,Workzone 37,m,1,false
+W41,Workzone 41,n,1,true
+W42,Workzone 42,n,1,false
+W51,Workzone 51,o,1,false
+W52,Workzone 52,o,1,false
+W53,Workzone 53,o,1,false
+W54,Workzone 54,o,1,true
+W55,Workzone 55,o,1,false
+W56,Workzone 56,o,1,true
+W57,Workzone 57,o,1,false

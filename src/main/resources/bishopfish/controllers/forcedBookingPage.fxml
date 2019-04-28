@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="693.0" stylesheets="@../curie.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bishopfish.controllers.ForcedBookingController">
+    <children>
+        <GridPane fx:id="gridPane" alignment="CENTER" layoutX="152.0" layoutY="61.0" styleClass="medium-cells" stylesheets="@../curie.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="11.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" percentWidth="5.0" prefWidth="110.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="110.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="98.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="300.0" minHeight="10.0" percentHeight="5.0" prefHeight="104.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="176.0" minHeight="10.0" percentHeight="22.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="121.0" minHeight="10.0" percentHeight="5.0" prefHeight="78.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label styleClass="font-white" text="Room:" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                    <font>
+                        <Font name="Marlett" size="22.0" />
+                    </font>
+                    <padding>
+                        <Insets right="20.0" />
+                    </padding></Label>
+                <JFXComboBox fx:id="roomList" accessibleText="Room Select" maxWidth="1.7976931348623157E308" style="-fx-background-color: #fefefe;" unFocusColor="BLACK" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+                <JFXButton fx:id="bookButton" accessibleText="Book Room" onAction="#bookBtnCode" ripplerFill="#032c59" text="Occupy" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="generic-button" />
+                        <String fx:value="font" />
+                    </styleClass></JFXButton>
+                <JFXButton onAction="#backButton" prefHeight="57.0" prefWidth="75.0" styleClass="back-button" text=" " GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
+                <Button mnemonicParsing="false" onAction="#homeButton" prefHeight="85.0" prefWidth="75.0" styleClass="home-button" text=" " GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+            <Label text="This is for demonstration purposes only!" textFill="WHITE" GridPane.columnIndex="3" GridPane.columnSpan="5" />
+            <JFXButton fx:id="unBookButton" accessibleText="Book Room" onAction="#unBookBtnCode" ripplerFill="#032c59" text="UnOccupy" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+               <styleClass>
+                  <String fx:value="generic-button" />
+                  <String fx:value="font" />
+               </styleClass>
+            </JFXButton>
+            </children>
+        </GridPane>
+    </children>
+    <styleClass>
+        <String fx:value="font" />
+        <String fx:value="large-cells" />
+    </styleClass>
+</AnchorPane>

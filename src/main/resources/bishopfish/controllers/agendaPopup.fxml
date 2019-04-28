@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import jfxtras.scene.control.agenda.Agenda?>
+
+<AnchorPane prefHeight="524.0" prefWidth="1539.0" stylesheets="@../curie.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bishopfish.controllers.AgendaController">
+   <children>
+      <GridPane prefHeight="510.0" prefWidth="697.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="0.0" prefWidth="57.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1094.0" minWidth="10.0" prefWidth="1066.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="81.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Agenda fx:id="agendaBookings" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS" />
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3">
+               <GridPane.margin>
+                  <Insets right="18.0" />
+               </GridPane.margin></Pane>
+            <FontAwesomeIconView size="20.0" text="" wrappingWidth="11.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="30.0" />
+               </GridPane.margin>
+            </FontAwesomeIconView>
+            <Button mnemonicParsing="false" onAction="#homeButton" prefHeight="85.0" prefWidth="75.0" styleClass="home-button" text=" " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Button>
+            <JFXButton onAction="#backButton" prefHeight="57.0" prefWidth="75.0" styleClass="back-button" text=" " GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <ComboBox fx:id="sceduledRooms" prefWidth="150.0" promptText="Room" style="-fx-background-color: white;" styleClass="font" stylesheets="@../curie.css" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="50.0" right="5.0" top="30.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="skinSelect" prefWidth="150.0" promptText="Time" style="-fx-background-color: white;" styleClass="font" stylesheets="@../curie.css" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="50.0" right="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <JFXButton fx:id="submitBtn" onAction="#onSubmitClick" prefHeight="40.0" prefWidth="128.0" style="-fx-background-color: white;" styleClass="font" stylesheets="@../curie.css" text="Submit">
+                     <VBox.margin>
+                        <Insets left="50.0" right="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Button fx:id="previousButton" mnemonicParsing="false" onAction="#onBackClick" prefHeight="27.0" prefWidth="137.0" style="-fx-background-color: white;" text="Previous" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="" size="20" text="" wrappingWidth="32.0" />
+               </graphic>
+            </Button>
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#onForwardClick" prefHeight="27.0" prefWidth="137.0" style="-fx-background-color: white;" text="Next" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <FontAwesomeIconView glyphName="" rotate="180.0" size="20" text="" wrappingWidth="32.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+            </FontAwesomeIconView>
+            <Pane mouseTransparent="true" prefHeight="472.0" prefWidth="1094.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+   <styleClass>
+      <String fx:value="medium-cells" />
+      <String fx:value="large-cells" />
+   </styleClass>
+</AnchorPane>

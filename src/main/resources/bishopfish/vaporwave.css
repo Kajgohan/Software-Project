@@ -1,0 +1,9 @@
+.background{
+    -fx-background-image: url("VWAVE.jpg");
+}
+.text-colors{
+    -fx-text-fill: #FC73F4;
+    -fx-background-color: #2AE5E7;
+    -fx-font: 16pt "Wingdings";
+    -fx-border-color: #853c9b;
+}

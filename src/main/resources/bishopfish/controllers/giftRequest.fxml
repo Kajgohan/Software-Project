@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../curie.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bishopfish.controllers.GiftRequestController">
+    <children>
+          <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+              <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="20" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <children>
+            <JFXButton fx:id="homeButton" onAction="#homeButton" prefHeight="89.0" prefWidth="76.0" ripplerFill="#032c59" style="-fx-background-color: white;" styleClass="home-button" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXButton>
+                  <JFXComboBox fx:id="giftOptionsCb" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Gift" style="-fx-background-color: white;" styleClass="font" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="receiverName" focusColor="WHITE" maxWidth="1.7976931348623157E308" promptText="Name" style="-fx-background-color: white;" styleClass="font" unFocusColor="#032c59" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+            <JFXTextField fx:id="fromName" focusColor="WHITE" maxWidth="1.7976931348623157E308" promptText="Name" style="-fx-background-color: white;" styleClass="font" unFocusColor="#032c59" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+            <JFXButton fx:id="sendButton" onAction="#onClick" ripplerFill="#032c59" style="-fx-background-color: white;" styleClass="font" text="Submit" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </JFXButton>
+            <JFXButton fx:id="backButton" onAction="#backButton" prefHeight="56.0" prefWidth="80.0" ripplerFill="#032c59" style="-fx-background-color: white;" styleClass="back-button" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXButton>
+                  <Label prefHeight="25.0" prefWidth="116.0" text="Send a Gift" textFill="#fefefe" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+            <Label prefHeight="25.0" prefWidth="129.0" text="Type of Gift:" textFill="WHITE" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+            <Label prefHeight="18.0" prefWidth="126.0" text="Send Gift To: " textFill="WHITE" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+            <Label prefHeight="25.0" prefWidth="157.0" text="Send Gift From: " textFill="WHITE" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+              </children>
+          </GridPane>
+    </children>
+   <styleClass>
+      <String fx:value="font" />
+      <String fx:value="medium-cells" />
+      <String fx:value="animated-thumb" />
+   </styleClass>
+</AnchorPane>
